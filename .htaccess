@@ -1,0 +1,23 @@
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /world-technic/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /world-technic/index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN Simply Static
+# Các nội dung nằm giữa "BEGIN Simply Static" và "END Simply Static" được tạo ra tự động, và chỉ nên được thay đổi thông qua các filter của WordPress. Mọi thay đổi tới thành phần này có thể sẽ bị mất và ghi đè.
+<Files "D:\xampp\htdocs\world-technic/wp-content/uploads\simply-static\c4f3d584a9474672bff543fb1b368e6c-debug.txt">
+require all denied
+require host localhost
+</Files>
+# END Simply Static
